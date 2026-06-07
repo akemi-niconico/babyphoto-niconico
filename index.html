@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>babyphoto niconico | akemi おうちスタジオ 愛知県一宮市</title>
+  <meta name="description" content="愛知県一宮市のおうちスタジオで、ニューボーンフォト・ミルクバス・マタニティなど、大切な瞬間をやさしく残します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="photos.js"></script>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#top" class="logo">
+        <span class="logo-main">babyphoto niconico</span>
+        <span class="logo-sub">おうちスタジオ / 愛知県一宮市</span>
+      </a>
+      <button class="nav-toggle" aria-label="メニュー" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <a href="#gallery">Gallery</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーロー -->
+  <section id="top" class="hero">
+    <div class="hero-content">
+      <p class="hero-catch">生まれてきてくれて、ありがとう。</p>
+      <h1>babyphoto <em>niconico</em></h1>
+      <p class="hero-sub">アニバーサリー・ミルクバス・ロケーション<br>愛知県一宮市 おうちスタジオ</p>
+      <a href="#gallery" class="btn">Galleryを見る</a>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- ギャラリー -->
+  <section id="gallery" class="section">
+    <div class="section-header">
+      <h2>Gallery</h2>
+      <p>大切な瞬間の記録</p>
+    </div>
+
+    <div class="gallery-tabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="anniversary">Anniversary</button>
+      <button class="tab" data-filter="milkbath">Milk Bath</button>
+      <button class="tab" data-filter="birthday">Birthday Event</button>
+      <button class="tab" data-filter="seasonal">Seasonal Photo Session</button>
+      <button class="tab" data-filter="location">Location</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- photos.js から自動生成されます -->
+    </div>
+  </section>
+
+  <!-- ライトボックス -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <button class="lightbox-prev" onclick="event.stopPropagation(); moveLightbox(-1)">&#8249;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-next" onclick="event.stopPropagation(); moveLightbox(1)">&#8250;</button>
+  </div>
+
+  <!-- メニュー -->
+  <section id="menu" class="section section-alt">
+    <div class="section-header">
+      <h2>Menu &amp; Price</h2>
+      <p>撮影メニュー</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Anniversary</h3>
+        <p class="menu-en">アニバーサリーフォト</p>
+        <p class="menu-desc">100日・ハーフバースデー・1歳バースデーなど、成長の節目をかわいく残します。一宮市のおうちスタジオにてお迎えします。</p>
+        <ul class="menu-price-list">
+          <li><span class="plan">10カット</span><span class="price">¥10,000</span></li>
+          <li class="plan-full"><span class="plan">全カット <small>30枚以上保証</small></span><span class="price">¥15,000</span></li>
+          <li class="plan-option"><span class="plan">ファーストアート</span><span class="price">+ ¥1,500</span></li>
+          <li class="plan-option"><span class="plan">絵の具遊び</span><span class="price">+ ¥8,000</span></li>
+        </ul>
+      </div>
+      <div class="menu-card">
+        <h3>Milk Bath</h3>
+        <p class="menu-en">ミルクバス</p>
+        <p class="menu-desc">一宮市のおうちスタジオにて、毎月１回撮影会を開催。日程は<a href="https://lin.ee/T9AgAKj" target="_blank" rel="noopener" class="menu-insta-link">公式LINE</a>と<a href="https://www.instagram.com/babyphoto_niconico/" target="_blank" rel="noopener" class="menu-insta-link">インスタ</a>でお知らせしています。</p>
+        <ul class="menu-price-list">
+          <li><span class="plan">5カット</span><span class="price">¥5,000</span></li>
+          <li><span class="plan">10カット</span><span class="price">¥6,000</span></li>
+          <li class="plan-full"><span class="plan">全カット <small>20枚以上保証</small></span><span class="price">¥7,000</span></li>
+        </ul>
+      </div>
+      <div class="menu-card">
+        <h3>Birthday Event</h3>
+        <p class="menu-en">バースデーイベント</p>
+        <p class="menu-desc">１歳バースデーとハーフバースデーの撮影会を隔月で開催。お誕生日の近いお友だちと集まって、みんなで一緒にお祝いします。<br>詳しくは<a href="https://www.instagram.com/babyphoto_niconico/" target="_blank" rel="noopener" class="menu-insta-link">インスタ投稿</a>から。</p>
+      </div>
+      <div class="menu-card">
+        <h3>Seasonal Photo Session</h3>
+        <p class="menu-en">季節の撮影会</p>
+        <p class="menu-desc">ハロウィンやクリスマスなど季節のテーマに合わせたブースの撮影会や、桜や紅葉などのロケーション撮影会。開催のお知らせは<a href="https://lin.ee/T9AgAKj" target="_blank" rel="noopener" class="menu-insta-link">公式LINE</a>と<a href="https://www.instagram.com/babyphoto_niconico/" target="_blank" rel="noopener" class="menu-insta-link">インスタ</a>から。</p>
+      </div>
+      <div class="menu-card">
+        <h3>Location</h3>
+        <p class="menu-en">ロケーションフォト</p>
+        <p class="menu-desc">公園や思い出の場所など、お好きなロケーションで撮影します。ご自宅への出張も可能です。</p>
+        <ul class="menu-price-list">
+          <li><span class="plan">30カット</span><span class="price">¥10,000</span></li>
+          <li class="plan-full"><span class="plan">全カット <small>50枚以上保証</small></span><span class="price">¥15,000</span></li>
+          <li class="plan-option"><span class="plan">七五三同行撮影</span><span class="price">+ ¥10,000</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- アバウト -->
+  <section id="about" class="section">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>About</h2>
+        <p class="about-name">akemi</p>
+        <p>愛知県一宮市のおうちスタジオで、<br>
+        赤ちゃんや子どもたちの大切な瞬間を撮影しています。</p>
+        <p>100日・ハーフ・1歳バースデーなどのアニバーサリー、<br>
+        ミルクバス撮影会、季節のブース、ロケーションフォト——<br>
+        どの撮影も、その子だけの特別な一枚になるように、<br>
+        一枚一枚ていねいにシャッターを切っています。</p>
+        <p>写真は、見るたびに記憶を連れてきてくれるもの。<br>
+        いつか大きくなったとき、家族みんなで笑って見返せる<br>
+        そんな作品をお届けしたいと思っています。</p>
+        <div class="about-sns">
+          <a href="https://www.instagram.com/babyphoto_niconico/" target="_blank" rel="noopener" class="sns-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @babyphoto_niconico
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- コンタクト -->
+  <section id="contact" class="section section-alt">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>お問い合わせ・ご予約</p>
+    </div>
+    <div class="contact-inner">
+      <p class="contact-lead">撮影のご依頼・ご相談はお気軽にどうぞ。<br>Instagram DM または 公式LINEからご連絡ください。</p>
+      <div class="contact-buttons">
+        <a href="https://www.instagram.com/babyphoto_niconico/" target="_blank" rel="noopener" class="contact-btn contact-btn-insta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram DM
+        </a>
+        <a href="https://lin.ee/T9AgAKj" target="_blank" rel="noopener" class="contact-btn contact-btn-line">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          公式LINE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">babyphoto <em>niconico</em></p>
+      <p class="footer-info">愛知県一宮市 おうちスタジオ</p>
+      <div class="footer-sns">
+        <a href="https://www.instagram.com/babyphoto_niconico/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2025 babyphoto niconico. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
