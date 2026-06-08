@@ -116,18 +116,25 @@ nav a:hover::after { transform: scaleX(1); }
   background: var(--beige);
 }
 
-.hero-bg {
+.hero-video {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(200,160,138,0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 30%, rgba(180,200,180,0.1) 0%, transparent 50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(250,247,243,0.1), rgba(250,247,243,0.5));
+  background: linear-gradient(to bottom, rgba(30,20,15,0.25), rgba(30,20,15,0.45));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
@@ -139,7 +146,7 @@ nav a:hover::after { transform: scaleX(1); }
 .hero-catch {
   font-size: 13px;
   letter-spacing: 0.3em;
-  color: var(--accent);
+  color: rgba(255,255,255,0.85);
   margin-bottom: 20px;
 }
 
@@ -148,20 +155,30 @@ nav a:hover::after { transform: scaleX(1); }
   font-size: clamp(36px, 7vw, 72px);
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: var(--dark);
+  color: white;
   line-height: 1.2;
   margin-bottom: 24px;
 }
 
 .hero h1 em {
   font-style: italic;
-  color: var(--brown);
+  color: #f0d0bc;
+}
+
+.hero-photo-movie {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+  text-transform: lowercase;
 }
 
 .hero-sub {
   font-size: 13px;
   letter-spacing: 0.2em;
-  color: var(--mid);
+  color: rgba(255,255,255,0.8);
   margin-bottom: 40px;
   line-height: 2;
 }
@@ -440,6 +457,11 @@ nav a:hover::after { transform: scaleX(1); }
   padding: 2px 6px;
   border-radius: 10px;
 }
+.menu-price-list small em {
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 400;
+}
 .menu-price-list .price {
   font-family: var(--font-en);
   font-size: 16px;
@@ -451,6 +473,41 @@ nav a:hover::after { transform: scaleX(1); }
   padding-top: 10px;
   margin-top: 2px;
   border-top: 1px dashed var(--beige);
+}
+.plan-option-first {
+  border-top: 1px dashed var(--beige);
+  padding-top: 10px;
+}
+.option-title {
+  font-family: var(--font-en);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--light-text);
+  margin-top: 18px;
+  margin-bottom: 2px;
+  text-align: left;
+}
+.option-list {
+  border-top: none;
+  padding-top: 0;
+}
+.plan-recommend {
+  background: rgba(200,160,138,0.08);
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin: 2px -8px;
+}
+.badge-recommend {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 10px;
+  font-family: var(--font-jp);
+  padding: 1px 7px;
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-left: 4px;
 }
 .menu-insta-link {
   color: var(--accent);
