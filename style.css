@@ -724,6 +724,19 @@ nav a:hover::after { transform: scaleX(1); }
 
   .menu-grid { grid-template-columns: 1fr; gap: 16px; }
 
+  .menu-price-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  .menu-price-list .price {
+    align-self: flex-end;
+    font-size: 15px;
+  }
+  .plan-recommend {
+    margin: 2px 0;
+  }
+
   .about-inner { flex-direction: column; gap: 32px; text-align: center; }
   .about-photo { margin: 0 auto; }
   .about-sns { justify-content: center; display: flex; }
